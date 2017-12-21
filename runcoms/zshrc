@@ -1,13 +1,15 @@
-#
-# Executes commands at the start of an interactive session.
-#
-# Authors:
-#   Sorin Ionescu <sorin.ionescu@gmail.com>
-#
-
 # Source Prezto.
 if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 
 # Customize to your needs...
+
+export PATH=/opt/local/bin:/opt/local/sbin:$PATH
+
+# Load rbenv automatically by appending
+# the following to ~/.zshrc:
+
+eval "$(rbenv init -)"
+# export PATH="/usr/local/opt/mysql@5.5/bin:$PATH"
+# export PATH="/usr/local/opt/mysql@5.6/bin:$PATH"
